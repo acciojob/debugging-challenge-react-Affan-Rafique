@@ -8,19 +8,20 @@ export default function App() {
 
   return (
     <div className="app">
-      {/* Heading text must remain constant */}
+      {/* Must remain constant for the test */}
       <h1 className="title" onDoubleClick={handleDoubleClick}>
         JSX Keyword Replacement Challenge
       </h1>
 
-      {/* Show the number somewhere else, not inside the H1 */}
+      {/* Show counter here (NOT inside the h1) */}
       <p className="count">Button clicked {count} times</p>
 
-      {/* Correct JSX attributes: className, onClick */}
-      <button className="btn" onClick={handleClick}>
+      <label htmlFor="btn" className="label">Press:</label>
+      <button id="btn" className="btn" onClick={handleClick}>
         Click Me
       </button>
     </div>
   );
 }
+
 
