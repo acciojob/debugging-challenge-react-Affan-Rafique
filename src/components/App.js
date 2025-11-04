@@ -1,27 +1,19 @@
 import React, { useState } from "react";
+import '../styles/App.css';
 
-export default function App() {
+const App = () => {
+
   const [count, setCount] = useState(0);
 
-  const handleClick = () => setCount((c) => c + 1);
-  const handleDoubleClick = () => setCount(0);
-
   return (
-    <div className="app">
-      {/* Must remain constant for the test */}
-      <h1 className="title" onDoubleClick={handleDoubleClick}>
-        JSX Keyword Replacement Challenge
-      </h1>
-
-      {/* Show counter here (NOT inside the h1) */}
-      <p className="count">Button clicked {count} times</p>
-
-      <label htmlFor="btn" className="label">Press:</label>
-      <button id="btn" className="btn" onClick={handleClick}>
-        Click Me
-      </button>
+    <div className="ball">
+      <h1 className="count" onDoubleClick={() => { alert("cant edit it") }}>{count}</h1>
+      <button className='increment-button' onClick={() => { setCount(count + 1) }}>Increment</button>
     </div>
-  );
+  )
 }
+
+
+export default App;
 
 
